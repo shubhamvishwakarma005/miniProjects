@@ -76,3 +76,17 @@ const nums = [5,9,7,1,3,8,1,7,5,6,8]
 // },0)
 
 // console.log(maxNum);
+
+
+
+// function greet(name , age = 18){
+//      return console.log(`Hello ${name}, you are ${age} year's Old `);
+     
+// }
+
+// console.log(greet('shubham',25));
+
+
+
+
+
