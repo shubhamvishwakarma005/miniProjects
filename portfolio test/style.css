@@ -1,0 +1,273 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  font-family: 'Libre Baskerville', serif;
+  color: gray;
+}
+
+/* Navbar */
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.logo {
+  width: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#logo-img {
+  width: 100%;
+  border-radius: 50%;
+  transition: transform 0.7s cubic-bezier(.32, .72, .28, 1.58);
+}
+
+.logo:hover #logo-img {
+  transform: rotateY(360deg);
+}
+
+.info {
+  display: flex;
+  gap: 25px;
+}
+
+.info a {
+  color: gray;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.info a:hover {
+  color: white;
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+/* Layout */
+.hero {
+  padding-top: 120px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px;
+}
+
+/* Home Text */
+.home-content {
+  max-width: 800px;
+}
+
+.home-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.home-content h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn-box {
+  margin-top: 20px;
+}
+
+.btn-box button {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-box button:hover {
+  background: gray;
+}
+
+/* Profile Card */
+.pic-frame {
+  background: white;
+  color: #333;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 26px;
+  padding: 25px;
+  position: relative;
+  border: 1px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pic-frame::before {
+  content: '';
+  position: absolute;
+  height: 36%;
+  width: 100%;
+  background-color: rgb(26, 25, 25);
+  top: 0;
+  left: 0;
+  border-radius: 24px 24px 0 0;
+}
+
+.image {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: rgb(37, 34, 34);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.prof-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.text-data {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.text-data .name {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.text-data .job {
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+/* Social Media Icons */
+.media {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+  width: 34px;
+  color: white;
+  background-color: #4070f4;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.link.github { background-color: black; }
+.link.twitter { background-color: black; }
+.link.discord { background-color: #5865F2; }
+.link.instagram { background-color: #C959C0; }
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.connect {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.connect:hover {
+  background-color: gray;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .info {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .landing {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+  }
+
+  .pic-frame {
+    width: 90%;
+  }
+
+  .image {
+    width: 220px;
+    height: 220px;
+  }
+}
